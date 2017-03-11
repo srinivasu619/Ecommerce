@@ -1,0 +1,14 @@
+<h1>Seller Info</h1>
+<ul>
+	<li>Owner Name: <%= @seller.ownername%></li>
+	<li>Enterprise Name: <%= @seller.enterprisename%></li>
+	<li>Email: <%=@seller.email%></li>
+	<li>Phone Number: <%=@seller.phoneno%></li>
+	<li>Address: <%=@seller.localaddress%></li>
+	<li>City: <%=@seller.city%></li>
+	<li>State: <%=@seller.state%></li>
+	<li>Landmark: <%=@seller.landmark%></li>
+	<li>Pincode: <%=@seller.pincode%></li>
+</ul>
+
+<%= link_to 'Back',seller_home_path%>

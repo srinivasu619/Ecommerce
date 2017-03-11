@@ -1,1 +1,8 @@
-<h1><%= @seller.ownwername%></h1>
+<h1><%= @seller.ownername%></h1>
+<%= link_to 'LOGOUT','/sellerlogout'%>
+<%= link_to 'PROFILE','/seller/home/profile'%>
+<%= link_to 'Add Product' , '/seller/home/newproduct'%>
+
+<% @products.each do |product|%>
+	<%= render 'product',:product => product%>
+<%end%>

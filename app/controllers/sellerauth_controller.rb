@@ -8,8 +8,8 @@ class SellerauthController < ApplicationController
   	seller = Seller.find_by_email(email)
   	if seller
   		if seller.password == password
-  			session[:user_id] = seller
-  			return redirect_to '/sellerportal'
+  			session[:user_id] = seller.id
+  			return redirect_to '/seller/home'
   		else
   			flash[:notice] = "Invalid username/password combination"
   			return redirect_to '/sellersignin'
@@ -43,5 +43,10 @@ class SellerauthController < ApplicationController
    		flash[:notice] = "User already exists"
    		return redirect_to '/sellersignup'
    	end
+  end
+
+  def logout
+    session[:user_id]=nil;
+    redirect_to '/'
   end
 end

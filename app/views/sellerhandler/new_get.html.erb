@@ -1,0 +1,16 @@
+<h1>Create New Product</h1>
+<%= form_tag url_for(action: 'new',controller: 'sellerhandler'),method: :post do%>
+	<%= label_tag 'Product Title'%><br>
+	<%= text_field_tag :title%><br>
+	<%= label_tag 'Product Description'%><br>
+	<%= text_area_tag :description%><br>
+	<%= label_tag 'Price'%><br>
+	<%= text_field_tag :price%><br>
+	<%= label_tag 'Qunatity'%><br>
+	<%= text_field_tag :quantity%><br>
+	<%= label_tag 'Category'%><br>
+	<%= text_field_tag :category%><br>
+
+	<%= submit_tag "Add Product" %>
+<% end %>
+

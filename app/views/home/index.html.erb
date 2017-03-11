@@ -1,5 +1,9 @@
 <h2> HANDLEVOGN </h2>
 <ul>
-	<li><%= link_to 'SIGN IN','/consumersignin'%></li>
+	<%if session[:user_id] == nil%>
+		<li><%= link_to 'SIGN IN','/consumersignin'%></li>
+	<%else%>
+		<li><%= link_to 'LOGOUT','/consumerlogout'%></li>
+	<% end %>	
 	<li><%= link_to 'CATEGORIES','/category'%></li>
 </ul>
