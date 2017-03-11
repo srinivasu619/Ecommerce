@@ -1,0 +1,37 @@
+<h1>Seller SignUp</h1>
+<br>
+<%= form_tag url_for(action: 'sellersignup', controller: 'sellerauth'),method: :post do%>
+<%= label_tag 'Owner Name'%><br>
+<%= text_field_tag :oname%> <br>
+
+<%= label_tag 'Enterprise Name'%><br>
+<%= text_field_tag :ename%> <br>
+
+<%= label_tag 'E-Mail'%><br>
+<%= text_field_tag :email %> <br>
+
+<%= label_tag 'Mailing address'%><br>
+<%= text_area_tag :address%> <br>
+
+<%= label_tag 'Phone Number'%><br>
+<%= text_field_tag :phoneno%> <br>
+
+<%= label_tag 'Password'%><br>
+<%= password_field_tag :password %> <br>
+
+<%= label_tag 'City'%><br>
+<%= text_field_tag :city%><br>
+
+<%= label_tag 'State'%><br>
+<%= text_field_tag :state%><br>
+
+<%= label_tag 'Landmark'%><br>
+<%= text_field_tag :landmark%><br>
+
+<%= label_tag 'Pincode'%><br>
+<%= text_field_tag :pincode%><br>
+
+<%= submit_tag "Sign Up" %>
+<% end %>
+
+<%=  link_to 'HOME','/'%>

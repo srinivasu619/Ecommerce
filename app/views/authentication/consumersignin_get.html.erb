@@ -1,0 +1,11 @@
+<h1>Consumer Login</h1>
+<br>
+<%= form_tag url_for(action: 'consumersignin', controller: 'authentication'),method: :post do %>
+<%= label_tag 'E-Mail'%><br>
+<%= text_field_tag :email %> <br>
+<%= label_tag 'Password'%><br>
+<%= password_field_tag :password %> <br>
+<%= submit_tag "Signin" %>
+<% end %>
+<%=  link_to 'HOME','/'%>
+<%=  link_to 'Seller Login','/sellersignin'%>
